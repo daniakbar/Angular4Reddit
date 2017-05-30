@@ -1,0 +1,60 @@
+<button class="ui button" (click)="votes.hide = !votes.hide">Enable List</button>
+<div class="ui items" *ngFor="let vote of votes" [hidden]="votes.hide">
+  <div class="item">
+    <div class="image">
+      <img src="https://semantic-ui.com/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <a href="{{ link }}" class="header">{{ vote.title }}</a>
+      
+      <div class="meta">
+        <span>{{ vote.link }}</span>
+        <h1>{{ vote.vote }} POINTS</h1>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+      <div class="extra">     
+        <a href (click)="voteUp()">
+          <i class="arrow up icon">
+             +1
+          </i>
+        </a>
+        <a href (click)="voteDown()">
+           <i class="arrow down icon">
+             -1
+           </i>
+        </a>    
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui items">
+  <div class="item">
+    <div class="image">
+      <img src="https://semantic-ui.com/images/wireframe/image.png">
+    </div>
+    <div class="content">
+      <a href="{{ link }}" class="header">{{ title }}</a>
+      <div class="meta">
+        <span>{{ link }}</span>
+        <h1>{{ votess }} POINTS</h1>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+      <div class="extra">     
+        <a href (click)="voteUp()">
+          <i class="arrow up icon">
+             +1
+          </i>
+        </a>
+        <a href (click)="voteDown()">
+           <i class="arrow down icon">
+             -1
+           </i>
+        </a>    
+      </div>
+    </div>
+  </div>
+</div>
